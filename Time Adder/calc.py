@@ -24,7 +24,6 @@ def check_limit(h1, m1, s1):
 
 def add_time(*args):
     try:
-        global h1_val, m1_val, s1_val
         h1_val = int(h1.get())
         m1_val = int(m1.get())
         s1_val = int(s1.get())
@@ -84,9 +83,23 @@ def sub_time(*args):
         h1_val = int(h1.get())
         m1_val = int(m1.get())
         s1_val = int(s1.get())
+        if not check_limit(h1_val, m1_val, s1_val):
+            colon = ttk.Label(frame, width=14, text="Invalid Time 1")
+            colon.grid(row=8, column=0, sticky=(W, E))
+            root.mainloop()
+        else:
+            colon = ttk.Label(frame, width=0, text="")
+            colon.grid(row=8, column=0, sticky=(W, E))
         h2_val = int(h2.get())
         m2_val = int(m2.get())
         s2_val = int(s2.get())
+        if not check_limit(h2_val, m2_val, s2_val):
+            colon = ttk.Label(frame, width=14, text="Invalid Time 2")
+            colon.grid(row=8, column=0, sticky=(W, E))
+            root.mainloop()
+        else:
+            colon = ttk.Label(frame, width=0, text="")
+            colon.grid(row=8, column=0, sticky=(W, E))
     except ValueError as e:
         print("Error : ", e)
     except:
