@@ -29,7 +29,7 @@ def add_time(*args):
         m1_val = int(m1.get())
         s1_val = int(s1.get())
         if not check_limit(h1_val, m1_val, s1_val):
-            colon = ttk.Label(frame, width=13, text="Invalid Time1")
+            colon = ttk.Label(frame, width=14, text="Invalid Time 1")
             colon.grid(row=8, column=0, sticky=(W, E))
             root.mainloop()
         else:
@@ -39,7 +39,7 @@ def add_time(*args):
         m2_val = int(m2.get())
         s2_val = int(s2.get())
         if not check_limit(h2_val, m2_val, s2_val):
-            colon = ttk.Label(frame, width=30, text="Invalid Time2")
+            colon = ttk.Label(frame, width=14, text="Invalid Time 2")
             colon.grid(row=8, column=0, sticky=(W, E))
             root.mainloop()
         else:
