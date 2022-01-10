@@ -160,6 +160,11 @@ def save_result(*args):
     m1.set(m_2)
     s1.set(s_2)
     d1.set(d_2)
+    h2.set(0)
+    m2.set(0)
+    s2.set(0)
+    d2.set(0)
+    h2_entry.focus_set()
 
 
 root = Tk()
@@ -204,6 +209,7 @@ Label_1 = ttk.Label(frame, width=28, text="Time 1 : ")
 Label_1.grid(row=1, column=0, sticky=(W, E))
 h1_entry = ttk.Entry(frame, width=2, textvariable=h1)
 h1_entry.grid(row=1, column=1, sticky=(W, E))
+h1_entry.focus_set()
 colon = ttk.Label(frame, width=1, text=":")
 colon.grid(row=1, column=2, sticky=(W, E))
 m1_entry = ttk.Entry(frame, width=2, textvariable=m1)
@@ -252,7 +258,8 @@ sub_button.grid(column=1, row=5, sticky=(W, E), columnspan=3)
 sub_button.columnconfigure
 
 
-sub_button = ttk.Button(frame, text="Load Result", width=5, command=save_result)
+sub_button = ttk.Button(frame, text="Load Result",
+                        width=5, command=save_result)
 sub_button.grid(column=0, row=5, sticky=(W, E))
 sub_button.columnconfigure
 
