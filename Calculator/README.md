@@ -1,5 +1,5 @@
 <h2>A minimal <b>Calculator</b> for Simple mathematical operations</h2>
-<ul>
+Tech Used : <ul>
     <li>Python</li>
     <li>tkinter</li>
 </ul>
