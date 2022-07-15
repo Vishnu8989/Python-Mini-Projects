@@ -9,7 +9,7 @@ def get_pic(name,d1 = 0,d2=0):
     image_url = "https://source.unsplash.com/3840x2160/?random"
     if(name):
         image_url = "https://source.unsplash.com/384{}x216{}/?{}".format(d1,d2,name)
-    print(image_url)
+    #print(image_url)
     # print("Generator : "+date_time)
     response = requests.get(image_url, stream=True)
     image_name = str((10*d1)+d2)+name+"_" + current_time + ".jpg"
@@ -27,10 +27,10 @@ if __name__ == "__main__":
 
     current_time = now.strftime("%d%M%Y%H%M%S")
     directory = a+'_'+current_time
-    
+   
     # Parent Directory path
     parent_dir = "./"
-    
+   
     # Path
     path = os.path.join(parent_dir, directory)
     os.mkdir(path)
@@ -45,5 +45,3 @@ if __name__ == "__main__":
         t = threading.Thread(target=get_pic, args=(a,i//10,i%10))
         t.start()
     print("Done!")
-
-
